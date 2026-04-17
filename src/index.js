@@ -29,7 +29,7 @@ function calculateRating(winnerRating,loserRating){
         newWinnerRating=winnerRating;
     }
     else {
-        ratingDifference=winnerRating-loserRating
+        const ratingDifference=winnerRating-loserRating
         if(ratingDifference<=2){
             newWinnerRating=winnerRating+2;
         }
@@ -44,6 +44,6 @@ function calculateRating(winnerRating,loserRating){
     return Number(newWinnerRating.toFixed(1));
 }
 
-let winnerRating=10;
+let winnerRating=20;
 let loserRating=12;
 console.log(calculateRating(winnerRating,loserRating))
