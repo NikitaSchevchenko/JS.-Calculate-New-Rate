@@ -19,14 +19,14 @@ function calculateRating(winnerRating,loserRating){
     }
 
     let newWinnerRating;
-    if(loserRating>winnerRating){
-        newWinnerRating=winnerRating+(loserRating-winnerRating+5)/3;
-    }
-    else if(winnerRating===0){
+    if(winnerRating===0){
         newWinnerRating=loserRating;
     }
     else if(loserRating===0){
         newWinnerRating=winnerRating;
+    }
+    else if(loserRating>winnerRating){
+        newWinnerRating=winnerRating+(loserRating-winnerRating+5)/3;
     }
     else {
         const ratingDifference=winnerRating-loserRating
@@ -44,6 +44,6 @@ function calculateRating(winnerRating,loserRating){
     return Number(newWinnerRating.toFixed(1));
 }
 
-let winnerRating=20;
+let winnerRating=0;
 let loserRating=12;
 console.log(calculateRating(winnerRating,loserRating))
