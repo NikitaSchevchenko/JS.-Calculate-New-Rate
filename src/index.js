@@ -19,31 +19,31 @@ function calculateRating(winnerRating,loserRating){
     }
 
     let newWinnerRating;
-    if(winnerRating===0){
-        newWinnerRating=loserRating;
+    if(winnerRating === 0){
+        newWinnerRating = loserRating;
     }
-    else if(loserRating===0){
-        newWinnerRating=winnerRating;
+    else if(loserRating === 0){
+        newWinnerRating = winnerRating;
     }
-    else if(loserRating>winnerRating){
-        newWinnerRating=winnerRating+(loserRating-winnerRating+5)/3;
+    else if(loserRating > winnerRating){
+        newWinnerRating = winnerRating+(loserRating-winnerRating+5)/3;
     }
-    else {
-        const ratingDifference=winnerRating-loserRating
-        if(ratingDifference<=2){
-            newWinnerRating=winnerRating+2;
+    else { 
+        const ratingDifference = winnerRating-loserRating;
+        if(ratingDifference <= 2){
+            newWinnerRating = winnerRating+2;
         }
-        else if(ratingDifference<20){
-            newWinnerRating=winnerRating+1;
+        else if(ratingDifference < 20){
+            newWinnerRating = winnerRating+1;
         }
         else{
-            newWinnerRating=winnerRating;
+            newWinnerRating = winnerRating;
         }
     }
 
     return Number(newWinnerRating.toFixed(1));
 }
 
-let winnerRating=0;
-let loserRating=12;
+let winnerRating = 0;
+let loserRating = 12;
 console.log(calculateRating(winnerRating,loserRating))
