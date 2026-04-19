@@ -14,18 +14,18 @@ function calculateRating(winnerRating,loserRating){
         Number.isNaN(loserRating) ||
         winnerRating < 0 ||
         loserRating < 0
-      ){
+      ) {
         return NaN;
     }
 
     let newWinnerRating;
-    if(winnerRating === 0){
+    if(winnerRating === 0) {
         newWinnerRating = loserRating;
     }
-    else if(loserRating === 0){
+    else if(loserRating === 0) {
         newWinnerRating = winnerRating;
     }
-    else if(loserRating > winnerRating){
+    else if(loserRating > winnerRating) {
         newWinnerRating = winnerRating+(loserRating-winnerRating+5)/3;
     }
     else { 
